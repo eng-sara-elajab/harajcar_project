@@ -1350,7 +1350,7 @@ class AdminController extends Controller
 			$report_delivery_notification->body = 'تم تجهيز التقرير لاعلان برقم'.' '.'غير محدد'.' '.'يرجى مراجعة صفحة التقارير السابقة للعرض';
 		else
 			$report_delivery_notification->body = 'تم تجهيز التقرير للاعلان رقم'.' '.$report->ads_no.' '.'يرجى مراجعة صفحة التقارير السابقة للعرض';
-		endif
+		/* endif */
         $report_delivery_notification->user_id = $report->user_id;
         $report_delivery_notification->save();
 
