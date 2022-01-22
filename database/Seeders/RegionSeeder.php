@@ -15,18 +15,18 @@ class RegionSeeder extends Seeder
     public function run()
     {
 		$region = new Region();
-		$region->arabic_name = 'قطر',
-		$region->english_name = 'Qatar',
+		$region->arabic_name = 'قطر';
+		$region->english_name = 'Qatar';
 		$region->save();
 		
 		$region = new Region();
-		$region->arabic_name = 'الرياض',
-		$region->english_name = 'Riyadhٌ',
+		$region->arabic_name = 'الرياض';
+		$region->english_name = 'Riyadhٌ';
 		$region->save();
 		
 		$region = new Region();
-		$region->arabic_name = 'أبو ظبي',
-		$region->english_name = 'Abu Dhabi',
+		$region->arabic_name = 'أبو ظبي';
+		$region->english_name = 'Abu Dhabi';
 		$region->save();
     }
 }

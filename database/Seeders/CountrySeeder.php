@@ -15,18 +15,18 @@ class CountrySeeder extends Seeder
     public function run()
     {
 		$country = new Country();
-		$country->arabic_name = 'قطر',
-		$country->english_name = 'Qatar',
+		$country->arabic_name = 'قطر';
+		$country->english_name = 'Qatar';
 		$country->save();
 		
 		$country = new Country();
-		$country->arabic_name = 'السعودية',
-		$country->english_name = 'Saudi Arabia',
+		$country->arabic_name = 'السعودية';
+		$country->english_name = 'Saudi Arabia';
 		$country->save();
 		
 		$country = new Country();
-		$country->arabic_name = 'الإمارات',
-		$country->english_name = 'United Arab Emarates',
+		$country->arabic_name = 'الإمارات';
+		$country->english_name = 'United Arab Emarates';
 		$country->save();
     }
 }
