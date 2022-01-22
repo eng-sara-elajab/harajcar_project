@@ -39,7 +39,7 @@
                                 <div class="col-md-2 col-xs-3">
                                     @foreach($images as $image)
                                         @if($image->post_id == $post->id)
-                                            <img src="{{secure_asset('/images/posts/'.$image->name)}}" style="width: 100%; height: 110px">
+                                            <img src="{{asset('/images/posts/'.$image->name)}}" style="width: 100%; height: 110px">
                                             @break
                                         @endif
                                     @endforeach
@@ -71,7 +71,7 @@
                                 <div class="col-md-2 col-xs-3">
                                     @foreach($images as $image)
                                         @if($image->post_id == $post->id)
-                                            <img src="{{secure_asset('/images/posts/'.$image->name)}}" style="width: 100%; height: 110px">
+                                            <img src="{{asset('/images/posts/'.$image->name)}}" style="width: 100%; height: 110px">
                                             @break
                                         @endif
                                     @endforeach
@@ -115,7 +115,7 @@
                         @foreach($images as $image)
                             @if($image->post_id == $post->id)
                                 <div class="col-md-4 col-xs-4" style="margin-top: 5px; margin-bottom: 5px">
-                                    <a href="/one_product/{{$post->id}}"><img src="{{secure_asset('/images/posts/'.$image->name)}}" class="img-thumbnail" style="width: 100%; height: 70px; border: 1px solid lightgrey"></a>
+                                    <a href="/one_product/{{$post->id}}"><img src="{{asset('/images/posts/'.$image->name)}}" class="img-thumbnail" style="width: 100%; height: 70px; border: 1px solid lightgrey"></a>
                                 </div>
                                 @break
                             @endif
