@@ -156,7 +156,7 @@ class PostController extends Controller
             $data = [];
             foreach($request->file('filenames') as $file)
             {
-                $name = time().'.'.$file->extension();
+                $name = time().'.'.$i.'.'.$file->extension();
                 $file->move(public_path().'/images/posts/', $name);
                 $i++;
                 $data[$i] = $name;
