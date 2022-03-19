@@ -7,7 +7,7 @@
         <title style="font-family: 'Segoe UI'">{{$website_data->arabic_name}}</title>
         <!-- font awesome library-->
 
-        {{--<link rel="stylesheet" href="{{secure_asset('css/app.css')}}">--}}
+        {{--<link rel="stylesheet" href="{{asset('css/app.css')}}">--}}
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- button group libraries-->
@@ -22,7 +22,7 @@
     <style>
         /* Add a black background color to the top navigation */
         .topnav {
-            background-color: #feee00;
+            background-color: #292b2c;
             /*overflow: hidden;*/
             width: 100%;
             margin-bottom: 0;
@@ -35,7 +35,7 @@
             text-align: center;
             padding: 14px 8px;
             text-decoration: none;
-            color: #708090;
+            color: lightgrey;
             font-family: Segoe UI;
             font-weight: bold;
             font-size: 23px;
@@ -556,7 +556,7 @@
         }
     </style>
     <body>
-        <nav class="topnav navbar bg-warning" id="myTopnav">
+        <nav class="topnav navbar bg-info" id="myTopnav">
             <a href="#" style="margin-left: 20px; margin-top: 2px">
                 <form method="post" action="/language" class="pull-left">
                     @csrf
@@ -663,7 +663,7 @@
                 </div>
                 <hr>
                 <a href="#"><h4 style="color:white; text-align: center">{{$website_data->arabic_name}}</h4></a>
-                <p style="color:white; text-align: center; font-size: 12px">حقوق النشر محفوظة 2020م - 2021م</p>
+                <p style="color:white; text-align: center; font-size: 12px">حقوق النشر محفوظة 2020م - {{ now()->year }}م</p>
             </div>
         </footer>
 

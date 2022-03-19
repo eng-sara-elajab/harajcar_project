@@ -39,7 +39,21 @@
                                 <div class="col-md-2 col-xs-3">
                                     @foreach($images as $image)
                                         @if($image->post_id == $post->id)
-                                            <img src="{{asset('/images/posts/'.$image->name)}}" style="width: 100%; height: 110px">
+                                            @if($image->name == "Mercedes Benz")
+												<img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2019-mercedes-benz-a220-4matic-108-1544471119.jpg?crop=0.675xw:0.505xh;0.0442xw,0.464xh&resize=1200:*" style="width: 100%; height: 110px">
+											@elseif($image->name == "LandCruiser LC300")
+												<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUZSQ__k41jJTEXJcWn7C1q4xfGASKs_YnuQ&usqp=CAU" style="width: 100%; height: 110px">												
+											@elseif($image->name == "Toyota FJ Cruiser")
+												<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIGP1I_XpnRUzx1zFB9DW7W1rwtFAccMh_sw&usqp=CAU" style="width: 100%; height: 110px">												
+											@elseif($image->name == "BMW")
+												<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzknhw9QV2pZSN7e2SEbfCWHxcMhsWOAknyQ&usqp=CAU" style="width: 100%; height: 110px">												
+											@elseif($image->name == "Isuzu D-Max V-Cross")
+												<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiFnZBnY2RdaEV0gWkrOO5S8GaOrrGPs9kyw&usqp=CAU" style="width: 100%; height: 110px">												
+											@elseif($image->name == "Rolls-Royce")
+												<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl34jmptlNxx2HYq5qIxQ3gbYtCon-hCB4pg&usqp=CAU" style="width: 100%; height: 110px">												
+											@else
+												<img src="{{asset('/images/posts/'.$image->name)}}" style="width: 100%; height: 110px">
+											@endif
                                             @break
                                         @endif
                                     @endforeach
@@ -71,7 +85,21 @@
                                 <div class="col-md-2 col-xs-3">
                                     @foreach($images as $image)
                                         @if($image->post_id == $post->id)
-                                            <img src="{{asset('/images/posts/'.$image->name)}}" style="width: 100%; height: 110px">
+											@if($image->name == "Mercedes Benz")
+												<img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2019-mercedes-benz-a220-4matic-108-1544471119.jpg?crop=0.675xw:0.505xh;0.0442xw,0.464xh&resize=1200:*" style="width: 100%; height: 110px">
+											@elseif($image->name == "LandCruiser LC300")
+												<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUZSQ__k41jJTEXJcWn7C1q4xfGASKs_YnuQ&usqp=CAU" style="width: 100%; height: 110px">												
+											@elseif($image->name == "Toyota FJ Cruiser")
+												<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIGP1I_XpnRUzx1zFB9DW7W1rwtFAccMh_sw&usqp=CAU" style="width: 100%; height: 110px">												
+											@elseif($image->name == "BMW")
+												<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzknhw9QV2pZSN7e2SEbfCWHxcMhsWOAknyQ&usqp=CAU" style="width: 100%; height: 110px">												
+											@elseif($image->name == "Isuzu D-Max V-Cross")
+												<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiFnZBnY2RdaEV0gWkrOO5S8GaOrrGPs9kyw&usqp=CAU" style="width: 100%; height: 110px">												
+											@elseif($image->name == "Rolls-Royce")
+												<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl34jmptlNxx2HYq5qIxQ3gbYtCon-hCB4pg&usqp=CAU" style="width: 100%; height: 110px">												
+											@else
+												<img src="{{asset('/images/posts/'.$image->name)}}" style="width: 100%; height: 110px">
+											@endif
                                             @break
                                         @endif
                                     @endforeach
@@ -115,7 +143,23 @@
                         @foreach($images as $image)
                             @if($image->post_id == $post->id)
                                 <div class="col-md-4 col-xs-4" style="margin-top: 5px; margin-bottom: 5px">
-                                    <a href="/one_product/{{$post->id}}"><img src="{{asset('/images/posts/'.$image->name)}}" class="img-thumbnail" style="width: 100%; height: 70px; border: 1px solid lightgrey"></a>
+                                    <a href="/one_product/{{$post->id}}">
+										@if($image->name == "Mercedes Benz")
+											<img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2019-mercedes-benz-a220-4matic-108-1544471119.jpg?crop=0.675xw:0.505xh;0.0442xw,0.464xh&resize=1200:*" class="img-thumbnail" style="width: 100%; height: 70px; border: 1px solid lightgrey">
+										@elseif($image->name == "LandCruiser LC300")
+											<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUZSQ__k41jJTEXJcWn7C1q4xfGASKs_YnuQ&usqp=CAU" class="img-thumbnail" style="width: 100%; height: 70px; border: 1px solid lightgrey">
+										@elseif($image->name == "Toyota FJ Cruiser")
+											<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIGP1I_XpnRUzx1zFB9DW7W1rwtFAccMh_sw&usqp=CAU" class="img-thumbnail" style="width: 100%; height: 70px; border: 1px solid lightgrey">
+										@elseif($image->name == "BMW")
+											<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzknhw9QV2pZSN7e2SEbfCWHxcMhsWOAknyQ&usqp=CAU" class="img-thumbnail" style="width: 100%; height: 70px; border: 1px solid lightgrey">
+										@elseif($image->name == "Isuzu D-Max V-Cross")
+											<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiFnZBnY2RdaEV0gWkrOO5S8GaOrrGPs9kyw&usqp=CAU" class="img-thumbnail" style="width: 100%; height: 70px; border: 1px solid lightgrey">
+										@elseif($image->name == "Rolls-Royce")
+											<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl34jmptlNxx2HYq5qIxQ3gbYtCon-hCB4pg&usqp=CAU" class="img-thumbnail" style="width: 100%; height: 70px; border: 1px solid lightgrey">
+										@else
+											<img src="{{asset('/images/posts/'.$image->name)}}" class="img-thumbnail" style="width: 100%; height: 70px; border: 1px solid lightgrey">
+										@endif
+									</a>
                                 </div>
                                 @break
                             @endif

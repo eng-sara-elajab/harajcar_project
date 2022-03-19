@@ -22,8 +22,24 @@
                             @if(count($posts) > 0)
                                 @foreach($posts as $one_post)
                                     @foreach($all_images as $all_image)
-                                        @if($all_image->post_id = $one_post->id)
-                                            <a href="/one_product/{{$one_post->id}}"><img src="{{asset('/images/posts/'.$all_image->name)}}" style="width: 32%; height: 80px; margin-top: 3px"></a>
+                                        @if($all_image->post_id == $one_post->id)
+                                            <a href="/one_product/{{$one_post->id}}">
+												@if($all_image->name == "Mercedes Benz")
+													<img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2019-mercedes-benz-a220-4matic-108-1544471119.jpg?crop=0.675xw:0.505xh;0.0442xw,0.464xh&resize=1200:*" style="width: 32%; height: 80px; margin-top: 3px">
+												@elseif($all_image->name == "LandCruiser LC300")
+													<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUZSQ__k41jJTEXJcWn7C1q4xfGASKs_YnuQ&usqp=CAU" style="width: 32%; height: 80px; margin-top: 3px">
+												@elseif($all_image->name == "Toyota FJ Cruiser")
+													<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIGP1I_XpnRUzx1zFB9DW7W1rwtFAccMh_sw&usqp=CAU" style="width: 32%; height: 80px; margin-top: 3px">
+												@elseif($all_image->name == "BMW")
+													<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzknhw9QV2pZSN7e2SEbfCWHxcMhsWOAknyQ&usqp=CAU" style="width: 32%; height: 80px; margin-top: 3px">
+												@elseif($all_image->name == "Isuzu D-Max V-Cross")
+													<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiFnZBnY2RdaEV0gWkrOO5S8GaOrrGPs9kyw&usqp=CAU" style="width: 32%; height: 80px; margin-top: 3px">
+												@elseif($all_image->name == "Rolls-Royce")
+													<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl34jmptlNxx2HYq5qIxQ3gbYtCon-hCB4pg&usqp=CAU" style="width: 32%; height: 80px; margin-top: 3px">
+												@else
+													<img src="{{asset('/images/posts/'.$all_image->name)}}" style="width: 32%; height: 80px; margin-top: 3px">
+												@endif
+											</a>
                                             @break
                                         @endif
                                     @endforeach
@@ -54,9 +70,41 @@
                                 </div>
                             </div>
                         </div><br><br>
-                        <p style="text-align: right; font-family: 'Segoe UI'; font-size: 18px; font-weight: bold; color: #696969; margin: 7px">{{$post->body}}</p>
+                        <p style="text-align: left; font-family: 'Segoe UI'; font-size: 18px; font-weight: bold; color: #696969; margin: 7px">{{$post->body}}</p>
                         @foreach($images as $image)
-                            <img src="{{asset('/images/posts/'.$image->name)}}" style="height: 350px; width: 96%; margin-left: 2%"><br>
+							@if($image->name == "Mercedes Benz")
+								<img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2019-mercedes-benz-a220-4matic-108-1544471119.jpg?crop=0.675xw:0.505xh;0.0442xw,0.464xh&resize=1200:*" style="height: 350px; width: 96%; margin-left: 2%"><br>
+								<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoLaOPEXBIGlwmisAhL1er7mYjsZFrMNWY8w&usqp=CAU" style="height: 350px; width: 96%; margin-left: 2%"><br>
+								<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwbCLzadCJ6a4KmMjJ1fjNWiqd0heEo_OgEQ&usqp=CAU" style="height: 350px; width: 96%; margin-left: 2%"><br>
+								@break
+							@elseif($image->name == "LandCruiser LC300")
+								<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUZSQ__k41jJTEXJcWn7C1q4xfGASKs_YnuQ&usqp=CAU" style="height: 350px; width: 96%; margin-left: 2%"><br>
+								<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTo-O5pf_GkJP822_qXIdEmvmSfeW_IwxCDpw&usqp=CAU" style="height: 350px; width: 96%; margin-left: 2%"><br>
+								<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwKyj1FkL1CYHwjaSmwWE_t7l67mkPTF8Icw&usqp=CAU" style="height: 350px; width: 96%; margin-left: 2%"><br>
+								@break
+							@elseif($image->name == "Toyota FJ Cruiser")
+								<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIGP1I_XpnRUzx1zFB9DW7W1rwtFAccMh_sw&usqp=CAU" style="height: 350px; width: 96%; margin-left: 2%"><br>
+								<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBD3XwMX3WraGHDXC53coQoAyLnB4_LaRB-A&usqp=CAU" style="height: 350px; width: 96%; margin-left: 2%"><br>
+								<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3fHL3sNVcoVOR-XPMMjkIQ5IYIo9iy3wo7Q&usqp=CAU" style="height: 350px; width: 96%; margin-left: 2%"><br>
+								@break
+							@elseif($image->name == "BMW")
+								<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzknhw9QV2pZSN7e2SEbfCWHxcMhsWOAknyQ&usqp=CAU" style="height: 350px; width: 96%; margin-left: 2%"><br>
+								<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiQjQRLG7_qIITdMkFNJusozs1OXl5jrAcww&usqp=CAU" style="height: 350px; width: 96%; margin-left: 2%"><br>
+								<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwEGmhmTc_Vm3EqyNFQnKwHXP3nEuNemgaPg&usqp=CAU" style="height: 350px; width: 96%; margin-left: 2%"><br>
+								@break
+							@elseif($image->name == "Isuzu D-Max V-Cross")
+								<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiFnZBnY2RdaEV0gWkrOO5S8GaOrrGPs9kyw&usqp=CAU" style="height: 350px; width: 96%; margin-left: 2%"><br>
+								<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwMIRxwQA8R5nuN1QwZY4sHHvxOt9qrTTp6A&usqp=CAU" style="height: 350px; width: 96%; margin-left: 2%"><br>
+								<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtYVdBwegoSqPTeZhYFQHLV7rtC8J7nyyBig&usqp=CAU" style="height: 350px; width: 96%; margin-left: 2%"><br>
+								@break
+							@elseif($image->name == "Rolls-Royce")
+								<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl34jmptlNxx2HYq5qIxQ3gbYtCon-hCB4pg&usqp=CAU" style="height: 350px; width: 96%; margin-left: 2%"><br>
+								<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzaPnu-uLFqUH2guvM2z0oaUsZAgk9Nhy09w&usqp=CAU" style="height: 350px; width: 96%; margin-left: 2%"><br>
+								<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-noVuk7keDB7GK77Q-jJRtFud9zuhDRsNMA&usqp=CAU" style="height: 350px; width: 96%; margin-left: 2%"><br>
+								@break
+							@else
+								<img src="{{asset('/images/posts/'.$image->name)}}" style="height: 350px; width: 96%; margin-left: 2%"><br>
+							@endif
                         @endforeach
                         <a href="tel://{{$post->phone}}" class="btn btn-default btn-lg pull-right" style="margin-top: 20px; margin-right: 2%; color: green; border-radius: 15px">{{$post->phone}}&nbsp;&nbsp;<i class="fa fa-phone circle-icon" style="color: #0275d8" aria-hidden="true"></i></a>
                         <br><br><br><br><br><br>
@@ -86,22 +134,22 @@
                             @foreach($users as $user)
                                 @if($comment->user_id == $user->id && $comment->post_id == $post->id)
                                     <div style="width: 98%; margin-left: 1%">
-                                        <i class="fa fa-user pull-right rounded-icon" style="color: darkgrey" aria-hidden="true"></i>
-                                        <a class="pull-right" href="/user/profile/{{$user->id}}" style="font-family: 'Segoe UI'">&nbsp;{{$user->name}}&nbsp;</a>
-                                        <i class="fa fa-envelope pull-right rounded-icon" style="color: darkgrey" aria-hidden="true"></i><br>
-                                        <br><a href="#" style="color: darkgrey; font-family: 'Segoe UI'; font-size: 12px; margin-right: 15px" class="pull-right">{{$comment->created_at->diffForHumans()}}</a><br>
-                                        <h4 style="width: 98%; margin-left: 1%; text-align: right; font-family: 'Segoe UI'; font-size: 16px">{{$comment->body}}</h4>
+                                        <i class="fa fa-user pull-left rounded-icon" style="color: darkgrey" aria-hidden="true"></i>
+                                        <a class="pull-left" href="/user/profile/{{$user->id}}" style="font-family: 'Segoe UI'">&nbsp;{{$user->name}}&nbsp;</a>
+                                        <i class="fa fa-envelope pull-left rounded-icon" style="color: darkgrey" aria-hidden="true"></i><br>
+                                        <br><a href="#" style="color: darkgrey; font-family: 'Segoe UI'; font-size: 12px; margin-left: 15px" class="pull-left">{{$comment->created_at->diffForHumans()}}</a><br>
+                                        <h4 style="width: 98%; margin-left: 1%; text-align: left; font-family: 'Segoe UI'; font-size: 16px">{{$comment->body}}</h4>
                                         <hr>
                                         @if(count($replies) > 0)
                                             @foreach($replies as $reply)
                                                 @foreach($users as $user)
                                                     @if($reply->user_id == $user->id && $reply->comment_id == $comment->id)
-                                                        <div style="width: 88%; margin-right: 12%">
-                                                            <i class="fa fa-user pull-right rounded-icon" style="color: darkgrey" aria-hidden="true"></i>
-                                                            <a class="pull-right" href="/user/profile/{{$user->id}}" style="font-family: 'Segoe UI'">&nbsp;{{$user->name}}&nbsp;</a>
-                                                            <i class="fa fa-envelope pull-right rounded-icon" style="color: darkgrey" aria-hidden="true"></i><br>
-                                                            <br><a href="#" style="color: darkgrey; font-family: 'Segoe UI'; font-size: 12px; margin-right: 15px" class="pull-right">{{$reply->created_at->diffForHumans()}}</a><br>
-                                                            <h4 style="width: 98%; margin-left: 1%; text-align: right; font-family: 'Segoe UI'; font-size: 16px">{{$reply->body}}</h4>
+                                                        <div style="width: 88%; margin-left: 8%">
+                                                            <i class="fa fa-user pull-left rounded-icon" style="color: darkgrey" aria-hidden="true"></i>
+                                                            <a class="pull-left" href="/user/profile/{{$user->id}}" style="font-family: 'Segoe UI'">&nbsp;{{$user->name}}&nbsp;</a>
+                                                            <i class="fa fa-envelope pull-left rounded-icon" style="color: darkgrey" aria-hidden="true"></i><br>
+                                                            <br><a href="#" style="color: darkgrey; font-family: 'Segoe UI'; font-size: 12px; margin-left: 15px" class="pull-left">{{$reply->created_at->diffForHumans()}}</a><br>
+                                                            <h4 style="width: 98%; margin-left: 1%; text-align: left; font-family: 'Segoe UI'; font-size: 16px">{{$reply->body}}</h4>
                                                             <hr>
                                                         </div>
                                                         @break
