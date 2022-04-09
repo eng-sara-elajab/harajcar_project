@@ -5,14 +5,14 @@
         <div class="col-md-1 col-md-offset-1 col-xs-11 col-xs-offset-1">
             <a href="{{Auth::user() ? '/new_ads' : '/login'}}" class="btn btn-default btn-lg" style="width: 165px; text-align: center; margin-top: 15px; border-radius: 5px 0 0 5px; font-size: 18px; font-family: 'Segoe UI'; color: darkgreen; font-weight: bold">+ Add Your Post</a>
         </div>
-        <div class="col-md-4 col-xs-5 col-xs-offset-1">
+        <div class="col-md-4 col-xs-8 col-xs-offset-2">
             <form action="{{ route('search.goods') }}" method="post" role="search" class="searchbox example" style="margin-top: 15px">
                 @csrf
                 <button type="submit" style="border-radius: 5px 0 0 5px"><i class="fa fa-search" style="color: lightgrey"></i></button>
                 <input type="text" name="q" placeholder="Search for goods" style="border-radius: 0 5px 5px 0">
             </form>
         </div>
-        <div class="col-md-3 col-md-offset-1 col-xs-5" style="margin-top: 18px">
+        <div class="col-md-3 col-md-offset-1 col-xs-10 col-xs-offset-1" style="margin-top: 18px">
             <a id="navbarDropdown" class="dropdown-toggle pull-left" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre
                style="padding-left: 10%; width: 100%; height: 42px; font-weight: bold; color: #A9A9A9; border: 2px solid lightgrey; font-family: 'Segoe UI'; font-size: 18px; text-decoration: none">
                 &nbsp;Select Region&nbsp;<span class="caret"></span>
